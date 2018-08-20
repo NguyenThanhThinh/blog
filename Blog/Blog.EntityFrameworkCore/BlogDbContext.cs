@@ -27,7 +27,7 @@ namespace Blog.EntityFrameworkCore
 
         public DbSet<Post> Posts { get; set; }
 
-       
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -48,4 +48,5 @@ namespace Blog.EntityFrameworkCore
             await base.SaveChangesAsync();
         }
 
+    }
 }
