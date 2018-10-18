@@ -8,8 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Blog.Web.Areas.Admin.Controllers
 {
     using static WebConstants;
-    [Area("Admin")]
-    public class UsersController : Controller
+    public class UsersController : BaseController
     {
         public IActionResult Index()
         {

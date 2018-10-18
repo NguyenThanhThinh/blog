@@ -8,5 +8,10 @@
 
             public const string AdminCreateUser = "Admin/Users/Create";
         }
+
+        public class Area
+        {
+            public const string Admin = "Admin";
+        }
     }
 }
