@@ -4,17 +4,13 @@
     {
        public class Admin
        {
-           public const string Role = "Admin";
+           public const string ROLE = "Admin";
 
-           public const string Username = "admin";
+           public const string USERNAME = "admin";
 
-           public const string Email = "thanhthinhcntt@gmail.com";
+           public const string EMAIL = "thanhthinhcntt@gmail.com";
 
-           public const string Password = "admin@123";
-
-           public const string FirstName = "Thinh";
-
-           public const string LastName = "Thanh";
+           public const string PASSWORD = "admin@123";
 
            public const string USER_ADMIN_ID = "8d0ef072-568e-4f2b-8f82-290764c89b";
 

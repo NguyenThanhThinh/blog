@@ -17,12 +17,12 @@ namespace Blog.EntityFrameworkCore.Extensions
                 new User
                 {
                     Id = Admin.USER_ADMIN_ID,
-                    UserName = Admin.Username,
-                    NormalizedUserName = Admin.Username,
-                    Email = Admin.Email,
-                    NormalizedEmail = Admin.Email,
+                    UserName = Admin.USERNAME,
+                    NormalizedUserName = Admin.USERNAME,
+                    Email = Admin.EMAIL,
+                    NormalizedEmail = Admin.EMAIL,
                     EmailConfirmed = true,
-                    PasswordHash = hasher.HashPassword(null, Admin.Password),
+                    PasswordHash = hasher.HashPassword(null, Admin.PASSWORD),
                     SecurityStamp = string.Empty,
                     ConcurrencyStamp = string.Empty
                 }
@@ -32,7 +32,7 @@ namespace Blog.EntityFrameworkCore.Extensions
                 new Role
                 {
                     Id = Admin.ADMIN_ROLE_ID,
-                    Name = Admin.Role,
+                    Name = Admin.ROLE,
                     NormalizedName ="ADMIN",
                     ConcurrencyStamp = string.Empty
                 },
