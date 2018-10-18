@@ -2,7 +2,7 @@
 
 namespace Blog.Core.Domains.Identities
 {
-    public class UserToken : IdentityUserToken<long>
+    public class UserToken : IdentityUserToken<string>
     {
     }
 }

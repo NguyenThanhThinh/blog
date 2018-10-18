@@ -2,7 +2,7 @@
 
 namespace Blog.Core.Domains.Identities
 {
-    public class RoleClaim : IdentityRoleClaim<long>
+    public class RoleClaim : IdentityRoleClaim<string>
     {
 
     }

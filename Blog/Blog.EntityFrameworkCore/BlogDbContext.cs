@@ -12,7 +12,7 @@ namespace Blog.EntityFrameworkCore
     public class BlogDbContext : IdentityDbContext<
             User,
             Role,
-            long,
+            string,
             UserClaim,
             UserRole,
             UserLogin,
