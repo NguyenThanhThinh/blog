@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Blog.Core.Domains.Identities
 {
-    public class User : IdentityUser<long>
+    public class User : IdentityUser<string>
     {
         public string ProfilePicture { get; set; }
 

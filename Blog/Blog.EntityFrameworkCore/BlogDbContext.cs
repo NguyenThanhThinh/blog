@@ -2,6 +2,7 @@
 using Blog.Core;
 using Blog.Core.Domains;
 using Blog.Core.Domains.Identities;
+using Blog.EntityFrameworkCore.Extensions;
 using Blog.EntityFrameworkCore.Mapping;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -38,25 +39,14 @@ namespace Blog.EntityFrameworkCore
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<User>(b => { b.ToTable("User"); });
-
-            modelBuilder.Entity<Role>()
-                .ToTable("Role");
-
-            modelBuilder.Entity<UserClaim>()
-                .ToTable("UserClaim");
-
+            modelBuilder.Seed();
+            modelBuilder.ApplyConfiguration(new UserMap());
+            modelBuilder.ApplyConfiguration(new RoleMap());
+            modelBuilder.ApplyConfiguration(new UserClaimMap());
             modelBuilder.ApplyConfiguration(new UserRoleMap());
-
-
-            modelBuilder.Entity<UserLogin>()
-                .ToTable("UserLogin");
-
-            modelBuilder.Entity<RoleClaim>()
-                .ToTable("RoleClaim");
-
-            modelBuilder.Entity<UserToken>()
-                .ToTable("UserToken");
+            modelBuilder.ApplyConfiguration(new UserLoginMap());
+            modelBuilder.ApplyConfiguration(new RoleClaimMap());
+            modelBuilder.ApplyConfiguration(new UserTokenMap());
             modelBuilder.ApplyConfiguration(new PostMap());
             modelBuilder.ApplyConfiguration(new TagMap());
             modelBuilder.ApplyConfiguration(new CategoryMap());
