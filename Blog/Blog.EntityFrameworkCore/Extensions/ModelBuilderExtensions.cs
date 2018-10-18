@@ -33,13 +33,13 @@ namespace Blog.EntityFrameworkCore.Extensions
                 {
                     Id = Admin.ADMIN_ROLE_ID,
                     Name = Admin.Role,
-                    NormalizedName = Admin.Role,
+                    NormalizedName ="ADMIN",
                     ConcurrencyStamp = string.Empty
                 },
                 new Role
                 {
                     Id = Admin.MEMBER_ROLE_ID,
-                    Name = "member",
+                    Name = "Member",
                     NormalizedName = "MEMBER",
                     ConcurrencyStamp = string.Empty
                 }
