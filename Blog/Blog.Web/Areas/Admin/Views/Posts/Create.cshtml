@@ -1,0 +1,62 @@
+﻿<form action="/" method="post">
+    <div class="d-flex justify-content-between flex-wrap flex-md-row align-items-center pb-2 mb-3 border-bottom">
+        <h3>Post</h3>
+        <div class="mb-2 mb-md-0">
+            <button type="submit" class="btn btn-sm btn-primary">Publish</button>
+            <button type="submit" class="btn btn-sm btn-info">Save Draft</button>
+            <a class="btn btn-sm btn-secondary" asp-page="/admin/posts/index">Cancel</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Content</label>
+                <div style="height:200px">
+                    <div id="editor"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label>Image</label>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile04">
+                    <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Post Url</label>
+                <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Publish Date</label>
+                <input type="text" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>Tags</label>
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+    </div>
+</form>
+@section scripts {
+    <script>
+        var quill = new Quill('#editor', {
+            modules: {
+                toolbar: [
+                    [{ header: [] }],
+                    ['bold', 'italic', 'underline', 'link'],
+                    [{ color: [] }, { background: [] }],
+                    [{ list: 'ordered' }, { list: 'bullet' }],
+                    ['clean'],
+                    ['image', 'code-block']
+                ]
+            },
+            theme: 'snow'  // or 'bubble'
+        });
+    </script>
+}

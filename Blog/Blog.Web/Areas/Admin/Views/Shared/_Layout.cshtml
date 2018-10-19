@@ -17,8 +17,10 @@
     <environment include="Development">
 
         <link href="~/css/sb-admin.min.css" rel="stylesheet" />
+        <link href="~/lib/quill/quill.snow.min.css" rel="stylesheet" />
+     
     </environment>
-  
+
 </head>
 <body id="page-top">
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
@@ -66,11 +68,13 @@
     <script src="~/themes/admin/vendor/chart.js/Chart.min.js"></script>
     <script src="~/themes/admin/vendor/datatables/jquery.dataTables.js"></script>
     <script src="~/themes/admin/vendor/datatables/dataTables.bootstrap4.js"></script>
-    <!-- Custom scripts for all pages-->
+<!-- Custom scripts for all pages-->
+<script src="~/lib/quill/quill.js"></script>
     <script src="~/themes/admin/js/sb-admin.min.js"></script>
     <!-- Demo scripts for this page-->
     <script src="~/themes/admin/js/demo/datatables-demo.js"></script>
-    <script src="~/themes/admin/js/demo/chart-area-demo.js"></script>
+
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
